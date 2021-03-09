@@ -3,9 +3,8 @@ import multiprocessing as mp
 import threading
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = socket.gethostname()
-port = 3254
-server.connect((host, port))
+
+server.connect(('localhost', 6666))
 
 
 def write_msg():
